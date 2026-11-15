@@ -40,11 +40,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// --- Selector interactivo de Habilidades en el Aside ---
-    const skillSelect = document.getElementById('skill-category-select');
+// --- Desplegable personalizado de Habilidades ---
+    const customSelect = document.getElementById('custom-skill-select');
+    const trigger = customSelect?.querySelector('.select-trigger');
+    const selectedText = document.getElementById('selected-category-text');
+    const options = customSelect?.querySelectorAll('.select-option');
     const tagsContainer = document.getElementById('skills-tags-container');
 
-    // Base de datos completa con todas tus habilidades organizadas
     const skillsData = {
         languages: ["Java", "JavaScript", "Python", "C#", "PHP", "SQL"],
         backend: ["OpenSearch", "Node.js", "Oracle", "SSMS", "WebSockets", "Git y GitHub", "MySQL", "Docker"],
@@ -56,7 +58,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!tagsContainer) return;
         const items = skillsData[category] || [];
         tagsContainer.innerHTML = '';
-        
         items.forEach(skill => {
             const span = document.createElement('span');
             span.textContent = skill;
@@ -64,12 +65,29 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    if (skillSelect) {
-        // Renderizar por defecto la primera opción
-        renderSkills(skillSelect.value);
+    if (customSelect && trigger) {
+        renderSkills('languages');
 
-        // Escuchar cambios en el select
-        skillSelect.addEventListener('change', (e) => {
-            renderSkills(e.target.value);
+        // Abrir / cerrar menú
+        trigger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            customSelect.classList.toggle('open');
+        });
+
+        // Seleccionar opción
+        options.forEach(option => {
+            option.addEventListener('click', () => {
+                options.forEach(opt => opt.classList.remove('active'));
+                option.classList.add('active');
+                
+                selectedText.textContent = option.textContent;
+                renderSkills(option.getAttribute('data-value'));
+                customSelect.classList.remove('open');
+            });
+        });
+
+        // Cerrar al hacer clic fuera
+        document.addEventListener('click', () => {
+            customSelect.classList.remove('open');
         });
     }
