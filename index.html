@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>María Chaparro Caballero | Full Stack Developer - CV</title>
+    <title>María Chaparro | Full Stack Developer - CV</title>
     <link rel="stylesheet" href="style.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -15,33 +15,32 @@
     <div class="background-glow"></div>
 
     <main class="cv-container">
-        <!-- Columna Lateral / Perfil (Aside original) -->
+        <!-- Columna Lateral / Perfil -->
         <aside class="sidebar glass">
             <div class="profile-header">
                 <div class="avatar-container">
                     <span class="initials">MC</span>
                 </div>
-                <h1>María Chaparro Caballero</h1>
-                <p class="role">Full Stack Developer Junior</p>
-                <span class="location"><i class="fa-solid fa-location-dot"></i> Madrid, España (28022)</span>
+                <h1>María Chaparro</h1>
+                <p class="role">Full Stack Developer</p>
+                <span class="location"><i class="fa-solid fa-location-dot"></i> Madrid, España</span>
             </div>
 
             <div class="contact-links">
                 <a href="https://github.com/MChaparroCaballero" target="_blank" class="btn-icon"><i class="fa-brands fa-github"></i> GitHub</a>
-                <a href="https://www.linkedin.com/in/maría-chaparro-caballero-98ba59336" target="_blank" class="btn-icon"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-                <a href="mailto:chaparrocaballero.maria@gmail.com" class="btn-icon"><i class="fa-solid fa-envelope"></i> chaparrocaballero.maria@gmail.com</a>
+                <a href="https://linkedin.com" target="_blank" class="btn-icon"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                <a href="mailto:tu-correo@email.com" class="btn-icon"><i class="fa-solid fa-envelope"></i> Contacto</a>
             </div>
 
             <div class="skills-mini">
                 <h3>Core Stack</h3>
                 <div class="tags">
                     <span>Python</span>
-                    <span>Java</span>
                     <span>PHP</span>
                     <span>JavaScript</span>
                     <span>Vue.js</span>
-                    <span>Angular</span>
-                    <span>OpenSearch</span>
+                    <span>FastAPI</span>
+                    <span>MySQL</span>
                 </div>
             </div>
         </aside>
@@ -50,146 +49,53 @@
         <section class="main-content glass">
             <!-- Pestañas de navegación -->
             <nav class="tabs-nav">
-                <button class="tab-btn active" data-target="about">Sobre mí y Educación</button>
+                <button class="tab-btn active" data-target="about">Sobre mí</button>
                 <button class="tab-btn" data-target="experience">Experiencia</button>
-                <button class="tab-btn" data-target="skills">Stack y Herramientas</button>
-                <button class="tab-btn" data-target="extra">Idiomas y Competencias</button>
+                <button class="tab-btn" data-target="projects">Proyectos</button>
             </nav>
 
-            <!-- Panel 1: Sobre mí y Educación -->
+            <!-- Panel: Sobre mí -->
             <div class="tab-pane active" id="about">
                 <h2>Perfil Profesional</h2>
-                <p>Desarrolladora de Aplicaciones Web y Multiplataforma Junior, Full Stack, con experiencia en front-end (Angular y Vue.js) y backend (Python, Java, PHP), además de desarrollo de soluciones orientadas a la gestión de datos (OpenSearch, spaCy, ELK), automatización e integración de herramientas basadas en Copilot. Mi objetivo es convertirme en una desarrolladora competente e innovadora, aportando soluciones prácticas y efectivas a los proyectos.</p>
+                <p>Desarrolladora Full Stack apasionada por la arquitectura de software, la lógica limpia y la creación de experiencias web eficientes. Graduada en DAW, con experiencia práctica en entornos empresariales desarrollando soluciones con IA, APIs RESTful y interfaces modernas.</p>
                 
                 <div class="interactive-card">
-                    <h3>🎓 Formación Educativa</h3>
-                    <div class="timeline-item">
-                        <span class="date">2025 - Junio 2026</span>
-                        <h3>Grado Superior DAW (Desarrollo de Aplicaciones Web)</h3>
-                        <p>ILERNA (Madrid)</p>
-                    </div>
-                    <div class="timeline-item">
-                        <span class="date">2023 - Junio 2025</span>
-                        <h3>Grado Superior DAM (Desarrollo de Aplicaciones Multiplataforma)</h3>
-                        <p>LINKIA FP (Madrid)</p>
-                    </div>
-                    <div class="timeline-item" style="margin-bottom: 0;">
-                        <span class="date">2020 - 2022</span>
-                        <h3>Bachillerato de Humanidades y Ciencias Sociales</h3>
-                        <p>IES Alameda de Osuna • Educación primaria y secundaria cursada en programa bilingüe en inglés.</p>
-                    </div>
+                    <h3>💡 Estado actual</h3>
+                    <p id="status-text">Buscando nuevos retos profesionales en desarrollo Full Stack y Frontend en Madrid.</p>
+                    <button id="toggle-status-btn" class="action-btn">Cambiar enfoque</button>
                 </div>
             </div>
 
-            <!-- Panel 2: Experiencia -->
+            <!-- Panel: Experiencia -->
             <div class="tab-pane" id="experience">
-                <h2>Vida Laboral</h2>
+                <h2>Experiencia Laboral</h2>
                 
                 <div class="timeline-item">
-                    <span class="date">Marzo 2026 - Mayo 2026</span>
-                    <h3>Desarrollador Junior (Prácticas) - Infortec (Proyecto para Kyndryl)</h3>
-                    <ul class="exp-list">
-                        <li>Desarrollo de soluciones de IA agéntica mediante LLMs, spaCy y tokenización para gestión de tickets y complementación con LangGraph.</li>
-                        <li>Indexación, análisis, visualización y automatización de pipelines de datos con OpenSearch, OpenSearch Dashboards y herramientas del ecosistema ELK.</li>
-                        <li>Desarrollo web con Vue.js, Django, Node.js y Python, e integración de asistentes inteligentes basados en Copilot.</li>
-                        <li>Desarrollo de interfaces con Streamlit y uso de WebSockets para comunicación en tiempo real.</li>
-                        <li>Trabajo en entorno WSL, gestión de contenedores con Docker, creación de APIs/endpoints, testing y validación.</li>
-                    </ul>
+                    <span class="date">Mar 2026 - May 2026</span>
+                    <h3>Junior Developer (Proyecto para Kyndryl / Infortec)</h3>
+                    <p>Colaboración en el desarrollo de soluciones de IA agéntica (LLMs, LangGraph), pipelines de datos con OpenSearch y ELK, y aplicaciones web interactivas.</p>
                 </div>
 
                 <div class="timeline-item">
-                    <span class="date">Marzo 2025 - Junio 2025</span>
-                    <h3>IT Techlead Junior desarrollo IT (Prácticas) - Aegon Seguros</h3>
-                    <ul class="exp-list">
-                        <li>Desarrollo de interfaces de usuario responsivas con Angular a partir de diseños UX/UI, mediante componentes reutilizables.</li>
-                        <li>Corrección de incidencias en front-end.</li>
-                        <li>Testing y reporte de incidencias en entorno de desarrollo.</li>
-                    </ul>
+                    <span class="date">Mar 2025 - Jun 2025</span>
+                    <h3>IT Development Intern (Aegon Seguros)</h3>
+                    <p>Optimización frontend, depuración de errores y pruebas en entornos de desarrollo corporativos.</p>
                 </div>
             </div>
 
-            <!-- Panel 3: Stack y Herramientas -->
-            <div class="tab-pane" id="skills">
-                <h2>Conocimientos Técnicos</h2>
+            <!-- Panel: Proyectos -->
+            <div class="tab-pane" id="projects">
+                <h2>Proyectos Destacados</h2>
                 <div class="projects-grid">
                     <div class="project-card">
-                        <h3>Lenguajes de Programación</h3>
-                        <div class="tags-small">
-                            <span>Java</span>
-                            <span>JavaScript</span>
-                            <span>Python</span>
-                            <span>C#</span>
-                            <span>PHP</span>
-                            <span>SQL</span>
-                        </div>
+                        <h3>HAVHAIR</h3>
+                        <p>Plataforma web de recomendación de peinados mediante análisis facial en cliente (TensorFlow.js / MediaPipe) y backend en PHP/MySQL con IA integrada.</p>
+                        <div class="tags-small"><span>Vue.js</span><span>PHP</span><span>TensorFlow</span></div>
                     </div>
-
                     <div class="project-card">
-                        <h3>Tecnologías y Backend</h3>
-                        <div class="tags-small">
-                            <span>OpenSearch</span>
-                            <span>Node.js</span>
-                            <span>Oracle</span>
-                            <span>SSMS</span>
-                            <span>WebSockets</span>
-                            <span>Git y GitHub</span>
-                            <span>MySQL</span>
-                            <span>Docker</span>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <h3>Frameworks y Librerías</h3>
-                        <div class="tags-small">
-                            <span>spaCy</span>
-                            <span>Vue.js</span>
-                            <span>Streamlit</span>
-                            <span>Django</span>
-                            <span>React</span>
-                            <span>Angular</span>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <h3>Herramientas y Otros</h3>
-                        <div class="tags-small">
-                            <span>OpenSearch Dashboards</span>
-                            <span>Consola Linux / Windows</span>
-                            <span>WSL</span>
-                            <span>VS Code</span>
-                            <span>Android Studio</span>
-                            <span>Eclipse</span>
-                            <span>IntelliJ</span>
-                            <span>XAMPP</span>
-                            <span>VMware</span>
-                            <span>HTML5 & CSS3</span>
-                            <span>Figma</span>
-                            <span>UMLstar</span>
-                            <span>Microsoft Office</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Panel 4: Idiomas y Competencias -->
-            <div class="tab-pane" id="extra">
-                <h2>Idiomas y Competencias Transversales</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <h3>🌍 Idiomas</h3>
-                        <p style="margin-bottom: 8px;"><strong>Español:</strong> Nativo</p>
-                        <p style="margin-bottom: 0;"><strong>Inglés:</strong> B2 (First) Cambridge</p>
-                    </div>
-
-                    <div class="project-card">
-                        <h3>🤝 Competencias Transversales</h3>
-                        <div class="tags-small">
-                            <span>Capacidad de trabajo en equipo</span>
-                            <span>Orientación a resultados</span>
-                            <span>Capacidad de tomar decisiones</span>
-                            <span>Resolución de problemas</span>
-                            <span>Empatía</span>
-                        </div>
+                        <h3>ConsultasApp API</h3>
+                        <p>API REST de gestión de consultas médicas desarrollada con FastAPI, MySQL y validación de esquemas con Pydantic.</p>
+                        <div class="tags-small"><span>Python</span><span>FastAPI</span><span>MySQL</span></div>
                     </div>
                 </div>
             </div>
