@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Control de Pestañas
     const tabBtns = document.querySelectorAll('.tab-btn');
     const tabPanes = document.querySelectorAll('.tab-pane');
 
@@ -9,23 +8,15 @@ document.addEventListener('DOMContentLoaded', () => {
             tabPanes.forEach(p => p.classList.remove('active'));
 
             btn.classList.add('active');
-            const targetId = btn.getAttribute('data-target');
-            const targetPane = document.getElementById(targetId);
+            const target = document.getElementById(btn.getAttribute('data-target'));
             
-            setTimeout(() => {
-                targetPane.classList.add('active');
-            }, 50);
+            requestAnimationFrame(() => {
+                target.classList.add('active');
+            });
         });
     });
 });
 
-// Función global para expandir/contraer las tarjetas de experiencia
-function toggleExperience(cardElement) {
-    // Opcional: si quieres que solo una esté abierta a la vez, descomenta las siguientes líneas:
-    /*
-    document.querySelectorAll('.exp-card').forEach(card => {
-        if (card !== cardElement) card.classList.remove('expanded');
-    });
-    */
-    cardElement.classList.toggle('expanded');
+function toggleExp(card) {
+    card.classList.toggle('active');
 }
