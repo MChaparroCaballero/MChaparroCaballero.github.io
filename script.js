@@ -39,3 +39,37 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 200);
     });
 });
+
+// --- Selector interactivo de Habilidades en el Aside ---
+    const skillSelect = document.getElementById('skill-category-select');
+    const tagsContainer = document.getElementById('skills-tags-container');
+
+    // Base de datos completa con todas tus habilidades organizadas
+    const skillsData = {
+        languages: ["Java", "JavaScript", "Python", "C#", "PHP", "SQL"],
+        backend: ["OpenSearch", "Node.js", "Oracle", "SSMS", "WebSockets", "Git y GitHub", "MySQL", "Docker"],
+        frameworks: ["spaCy", "Vue.js", "Streamlit", "Django", "React", "Angular"],
+        tools: ["OpenSearch Dashboards", "Consola Linux/Windows", "WSL", "VS Code", "Android Studio", "Eclipse", "IntelliJ", "XAMPP", "VMware", "Figma", "UMLstar", "Microsoft Office"]
+    };
+
+    function renderSkills(category) {
+        if (!tagsContainer) return;
+        const items = skillsData[category] || [];
+        tagsContainer.innerHTML = '';
+        
+        items.forEach(skill => {
+            const span = document.createElement('span');
+            span.textContent = skill;
+            tagsContainer.appendChild(span);
+        });
+    }
+
+    if (skillSelect) {
+        // Renderizar por defecto la primera opción
+        renderSkills(skillSelect.value);
+
+        // Escuchar cambios en el select
+        skillSelect.addEventListener('change', (e) => {
+            renderSkills(e.target.value);
+        });
+    }
