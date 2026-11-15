@@ -272,6 +272,13 @@ body {
     margin-bottom: 6px;
 }
 
+.skills-header-select {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Espacio ampliado entre el título y el select */
+    margin-bottom: 12px; /* Margen inferior opcional para separarlo de los tags */
+}
+
 .custom-select {
     position: relative;
     user-select: none;
